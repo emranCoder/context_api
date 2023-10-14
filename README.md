@@ -24,7 +24,6 @@ Now wrap parent with Context Provider && Provide a value of the context as prop.
        </CounterContext.Provider>`
 
 6. Consumer follows the render prop pattern:
-7. 
   ` import CreateContext from './CreateContext';
    <CreateContext.Consumer>
      ({count,functionName})=>{ <counter count={count} inCrementCount = {functionName}   />}
