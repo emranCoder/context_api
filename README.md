@@ -5,7 +5,6 @@ This will help to pause data between all sources under the root file for data ac
 1. Download the CreateContext.js file and take to your project.
 2. create a context
     `const CreateContext = CreateContext();
-   
     export default CreateContext;`
    
 in react: `const CreateContext = React.CreateContext();`
@@ -20,10 +19,12 @@ in react: `const CreateContext = React.CreateContext();`
 Now wrap parent with Context Provider && Provide a value of the context as prop. In this Case it's App.js. Like this
 
       `import CreateContext from './CreateContext';
-   
-      <CreateContext.Provider value={{count:0, inCrementCount:  functionName } } > <App.js/> </CounterContext.Provider>`
+       <CreateContext.Provider value={{count:0, inCrementCount:  functionName } } >
+            <App.js/>
+       </CounterContext.Provider>`
 
-5. Consumer follows the render prop pattern:
+6. Consumer follows the render prop pattern:
+7. 
   ` import CreateContext from './CreateContext';
    <CreateContext.Consumer>
      ({count,functionName})=>{ <counter count={count} inCrementCount = {functionName}   />}
